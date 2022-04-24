@@ -35,7 +35,7 @@ defmodule Memcached.Packet do
   def set(key, value, ttl, cas, flags) do
     key_size = byte_size(key)
     value_size = byte_size(value)
-    total_body_length = key_size + value_size + 8 # The +8 is from extras which always has a length of 1 byte.
+    total_body_length = key_size + value_size + 8 # The +8 is from extras which always has a length of 8 bytes.
 
     [
       # Magic
