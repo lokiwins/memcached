@@ -36,6 +36,7 @@ defmodule Memcached.Packet do
     key_size = byte_size(key)
     value_size = byte_size(value)
     total_body_length = key_size + value_size + 8 # The +8 is from extras which always has a length of 8 bytes.
+    # 4 bytes for flags and 4 bytes for expiration
 
     [
       # Magic
