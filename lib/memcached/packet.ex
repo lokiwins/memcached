@@ -57,10 +57,13 @@ defmodule Memcached.Packet do
       <<0x00::size(32)>>,
       # CAS
       <<cas::size(64)>>,
+      # Flags
       <<flags::size(32)>>,
+      # Expiration
       <<ttl::size(32)>>,
       # Key
       key,
+      # Value
       value
     ]
   end
