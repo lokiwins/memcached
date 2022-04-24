@@ -126,7 +126,7 @@ defmodule Memcached.Packet do
   defp parse_status(0x0002), do: :exists
   defp parse_status(0x0003), do: :too_large
   defp parse_status(0x0004), do: :invalid_args
-  defp parse_status(0x0005), do: :no_stored
+  defp parse_status(0x0005), do: :not_stored
   defp parse_status(0x0006), do: :non_numeric
   defp parse_status(0x0007), do: :vbucket_error
   defp parse_status(0x0008), do: :auth_error
