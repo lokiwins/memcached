@@ -1,0 +1,2 @@
+defmodule Memcached do
+end
